@@ -1,55 +1,47 @@
 <template>
-  <div>
-    <nuxt/>
-  </div>
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <span class="icon fa-diamond"></span>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>Tobias Thiele</h1>
+                    <p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br/>
+                        for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!--<li><a href="#elements">Elements</a></li>-->
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <nuxt id="main" />
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+        </footer>
+
+    </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
-</style>
+<script>
+    export default {
+        mounted() {
+            if (process.browser) {
+                require('../static/assets/js/main');
+            }
+        }
+    }
+</script>
